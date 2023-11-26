@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="image">
+        <img
+          src="https://www.getsharedcontacts.com/wp-content/uploads/2022/01/The-short-guide-to-Contact-Management-1024x576.png "
+          class="image-fluid">
+      </div>
+    </div>
+    <!-- form section -->
+    <div class="col-md-6">
+      <div class="card">
+        <h5>Add Contact</h5>
+        <div class="row">
+          <form [formGroup]="contactform" (ngSubmit)="contactform.status !=='INVALID' &&  submitcontact">
+            <div class=" mb-1 container-fluid">
+              <label for="fname" class="form-label ">First-Name</label>
+              <input type="text" class="form-control" id="fname" placeholder="first-name" [ngClass]="{error:getControl('firstname')?.errors && getControl('firstname')?.touched}" formControlName="firstname">
+              <div *ngIf="getControl('firstname')?.errors && getControl('firstname')?.touched">
+                <small class="text-danger" *ngIf="getControl('firstname')?.errors?.['required']">first Name is Required</small>
+                <small class="text-danger" *ngIf="getControl('firstname')?.errors?.['maxlength']">only 12 character is allowed</small>
+              </div>
+             </div>
+             <div>
+             <label for="name">Last-Name</label>
+              <input type="text" class="form-control" [ngClass]="{error:getControl('lastname')?.errors && getControl('lastname')?.touched}" formControlName="lastname" placeholder="Enter Last-Name">
+              <div *ngIf="getControl('lastname')?.errors && getControl('lastname')?.touched">
+                <small class="text-danger" *ngIf="getControl('lastname')?.errors?.['required']">last-Name is
+                  Required</small>
+                <small class="text-danger" *ngIf="getControl('lastname')?.errors?.['maxlength']">only 12 character is
+                  allowed</small>
+              </div>
+            </div>
+            <div class="form-group mb-1 ">
+              <label for="phonenumber">Age</label>
+              <input type="number" class="form-control" [ngClass]="{error:getControl('Age')?.errors && getControl('Age')?.touched}" formControlName="Age" placeholder="Enter Age">
+              <div *ngIf="getControl('Age')?.errors && getControl('Age')?.touched">
+                <small class="text-danger" *ngIf="getControl('Age')?.errors?.['required']">Age is Required</small>
+                  <small class="text-danger" *ngIf="getControl('Age')?.errors?.['pattern']">Please Eneter Valid age</small>
+              </div>
+
+            </div>
+            <div class="form-group mb-1">
+              <label for="phonenumber">Email</label>
+              <input type="email" class="form-control"  [ngClass]="{error:getControl('email')?.errors && getControl('email')?.touched}" formControlName="email" placeholder="Enter Email-ID">
+              <div *ngIf="getControl('email')?.errors && getControl('email')?.touched">
+                <small class="text-danger" *ngIf="getControl('email')?.errors?.['required']">Email is Required</small>
+                <small class="text-danger" *ngIf="getControl('email')?.errors?.['pattern']"> Valid Email is
+                  Required</small>
+              </div>
+            </div>
+            <div class="form-group mb-1">
+              <label for="city-Name">City-Name</label>
+              <input type="text" class="form-control" formControlName="city" [ngClass]="{error:getControl('city')?.errors && getControl('city')?.touched}" placeholder="Enter City-Name">
+              <div *ngIf="getControl('city')?.errors && getControl('city')?.touched">
+                <small class="text-danger" *ngIf="getControl('city')?.errors?.['required']"> please Enter City</small>
+               </div> 
+            </div>
+            <div class="text-center mt-2">
+              <button [disabled]="contactform.status==='INVALID'" type="submit"
+                (click)="submitcontact(this.contactform.value)" class="btn btn-primary">Submit</button>&nbsp;
+              <button type="button" routerLink="/header/contactlist" class="btn btn-success">Back</button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

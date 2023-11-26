@@ -1,0 +1,26 @@
+.image{
+    width: 350px;
+    margin-top:85px;
+
+}
+.card
+{
+    top: 5%;
+    left: 46%;
+    right: 30px;
+    width: 375px;
+    padding: 27px 71px;
+    border:1px;
+    border-style: solid;
+  border-color: #92a8d1;
+}
+h5{
+    width: 600px;
+    font-size:21px;
+}
+.errors{
+    border: 2px solid red;
+}
+input {
+    width: 130%;
+  }

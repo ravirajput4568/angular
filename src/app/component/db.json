@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "firstname": "ravi ",
+      "lastname": "rajput",
+      "Age": 23,
+      "email": "ravi2023@gmail.com",
+      "city": "delhi",
+      "id": 1
+    },
+    {
+      "firstname": " Ravi",
+      "lastname": "rajput",
+      "Age": 23,
+      "email": "ravirajput4568@gmail.com",
+      "city": "delhi",
+      "id": 2
+    },
+    {
+      "firstname": " Ravi",
+      "lastname": "rajput",
+      "Age": 32,
+      "email": "ravi@gmail.com",
+      "city": "delhi",
+      "id": 3
+    },
+    {
+      "firstname": " Ravi",
+      "lastname": "rajput",
+      "Age": 23,
+      "email": "ravirajput4567@gmail.com",
+      "city": "delhi",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
